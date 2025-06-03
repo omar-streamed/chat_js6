@@ -9,7 +9,7 @@ document.getElementById('login-form').addEventListener('submit', async (e) => {
   const appName = document.getElementById('appName').value.trim();
 
   try {
-    const response = await fetch('http://192.168.31.36:4000/user/register', {
+    const response = await fetch('http://192.168.21.113:4000/user/register', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
