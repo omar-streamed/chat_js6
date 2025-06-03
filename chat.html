@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chat App</title>
+  <link rel="stylesheet" href="./css/chat.css" />
+</head>
+<body>
+
+  <!-- Button to open sidebar on small screens -->
+  <button id="openSidebarBtn" class="open-sidebar-btn" onclick="toggleSidebar()" aria-label="Open sidebar">☰</button>
+
+  <div class="chat-page">
+    <aside class="sidebar" id="sidebar">
+      <button class="toggle-sidebar" onclick="toggleSidebar()" aria-label="Close sidebar">✕</button>
+      <h3 class="chat-heading">Chats</h3>
+      <div id="chatList"></div>
+      <!-- <h3>App Users</h3> -->
+      <div id="userList"></div>
+    </aside>
+
+    <main class="chat-section">
+      <div class="chat-header">
+        <h3 id="chatWith">Select a friend</h3>
+      </div>
+      <div class="messages" id="messages"></div>
+      <form class="input-area" onsubmit="sendMessage(event)">
+        <input type="text" id="messageInput" placeholder="Type a message..." required />
+        <button type="submit">Send</button>
+      </form>
+    </main>
+  </div>
+
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+  <script src="./js/chat.js"></script>
+</body>
+</html>
